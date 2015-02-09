@@ -1,0 +1,22 @@
+<div class="page-header">
+  <div class="pull-right">
+    <%= link_to 'Edit Event', edit_location_event_path(@location, @event), class: "btn btn-info" %>
+    <%= link_to 'Delete Event', location_event_path(@location, @event), class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+  <h1><%= @event.description %></h1>
+</div>
+
+
+<div class="row">
+  <span><strong> Description:</strong> </span>
+  <%= @event.description %>
+</div>
+<div class="row">
+  <span><strong> Date:</strong> </span>
+  <%= @event.date %>
+</div>
+
+<div class="row">
+  <span> <strong>ID Required: </strong></span>
+  <%= @event.requires_id %>
+</div>

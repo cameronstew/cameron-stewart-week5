@@ -1,0 +1,13 @@
+@import "bootstrap-sprockets";
+
+@import "bootstrap";
+
+body{
+  margin-top:50px;
+}
+
+.alert-success,
+.alert-danger{
+  margin-top: 10px;
+    text-align:center;
+}

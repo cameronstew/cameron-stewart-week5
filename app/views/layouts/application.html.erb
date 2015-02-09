@@ -7,8 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Locations</a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <% flash.each do |type, message| %>
+      <% if type == "notice" %>
+        <p class="alert alert-success" id="notice"><%= message  %></p>
+        <% else %>
+        <p class="alert alert-danger" id="notice"><%= message  %></p>
+      <% end %>
+    <% end %>
+      <%= yield %>
+  </div>
 </body>
 </html>
